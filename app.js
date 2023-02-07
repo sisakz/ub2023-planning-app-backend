@@ -5,7 +5,7 @@ const fs = require('fs');
 const app = express();
 app.use(cors());
 
-const data = JSON.parse(fs.readFileSync('routesjson'));
+const data = JSON.parse(fs.readFileSync('routes.json'));
 
 app.get('/api/v1/routes', (req, res) => {
     res.json(data);
